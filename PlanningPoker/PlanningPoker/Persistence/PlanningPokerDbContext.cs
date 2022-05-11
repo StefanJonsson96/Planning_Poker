@@ -53,7 +53,7 @@ namespace PlanningPoker.Persistence
             //modelBuilder.Entity<aspnetuser>()
             //            .Property(d => d.ImagePath).HasDefaultValue("");
 
-            //modelBuilder.SeedTeam();
+            modelBuilder.SeedTeam();
             //modelBuilder.SeedUserStory();
             //modelBuilder.SeedRound();
             //modelBuilder.SeedGame();

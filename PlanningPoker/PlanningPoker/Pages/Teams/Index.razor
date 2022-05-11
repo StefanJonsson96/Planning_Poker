@@ -9,16 +9,22 @@
 
 Welcome :)
 
-
+@{int i = 0;}
 @foreach(var team in Test.Team)
 {
-    if (team.IsDeleted != true)
+    i++;
+    if (team.IsDeleted == false)
     {
         <p>Namn: @team.Name</p>
         <p>Datum skapat: @team.Created</p>
         <p>Id: @team.Id</p>
         <p>Senast uppdaterat: @team.Updated</p>
+
+        @* if (inloggad som teamleader){}*@
+        <a href="Teams/Edit">Edit Team</a>
+        <a href="Teams/Delete">Delete Team</a>
     }
 }
+<p>@i</p>
 <a href="Teams/Create">Create new Team</a>
 

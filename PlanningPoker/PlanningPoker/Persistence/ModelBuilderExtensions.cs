@@ -10,7 +10,7 @@ namespace PlanningPoker.Persistence
         {
             modelBuilder.Entity<Team>()
                         .HasData(
-                        new Team { }
+                        new Team { Id = 1,  Name ="Stefans Team", }
 
                 );
         }
