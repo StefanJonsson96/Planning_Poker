@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using PlanningPoker;
+using PlanningPoker.Driven_Adapters;
 using PlanningPoker.Persistence;
 
 
@@ -14,7 +15,7 @@ var connectionString = builder.Configuration.GetConnectionString("PlanningPokerD
 builder.Services.AddDbContext<PlanningPokerDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
+builder.Services.AddScoped<ITest, Test>();
 
 
 var app = builder.Build();

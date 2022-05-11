@@ -1,0 +1,24 @@
+﻿@using PlanningPoker.Driven_Adapters;
+@using PlanningPoker.Persistence;
+@using PlanningPoker.Shared;
+@page "/Teams/Index"
+@inject ITest Test
+<PageTitle>Teams</PageTitle>
+
+<h1>Teams</h1>
+
+Welcome :)
+
+
+@foreach(var team in Test.Team)
+{
+    if (team.IsDeleted != true)
+    {
+        <p>Namn: @team.Name</p>
+        <p>Datum skapat: @team.Created</p>
+        <p>Id: @team.Id</p>
+        <p>Senast uppdaterat: @team.Updated</p>
+    }
+}
+<a href="Teams/Create">Create new Team</a>
+

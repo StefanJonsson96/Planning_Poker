@@ -8,45 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PlanningPoker
 build_property.RootNamespace = PlanningPoker
-build_property.ProjectDir = C:\Users\Stefan\Desktop\PlanningPoker\PlanningPoker\
+build_property.ProjectDir = C:\Users\steps\Desktop\Planning_Poker\PlanningPoker\PlanningPoker\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Stefan\Desktop\PlanningPoker\PlanningPoker
+build_property.MSBuildProjectDirectory = C:\Users\steps\Desktop\Planning_Poker\PlanningPoker\PlanningPoker
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/App.razor]
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xQYWdlc1xJbmRleC5yYXpvcg==
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xTaGFyZWRcU3VydmV5UHJvbXB0LnJhem9y
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhbXNcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/_Imports.razor]
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhbXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xTaGFyZWRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-cylcs3tcw9
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-72ko8cl7fh
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xTaGFyZWRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-mx4kuiwmlz
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7pw58fdxix
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xQYWdlc1xFcnJvci5jc2h0bWw=
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Pages/_Host.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xQYWdlc1xfSG9zdC5jc2h0bWw=
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Stefan/Desktop/PlanningPoker/PlanningPoker/Driving Adapters/Pages/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RHJpdmluZyBBZGFwdGVyc1xQYWdlc1xfTGF5b3V0LmNzaHRtbA==
+[C:/Users/steps/Desktop/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

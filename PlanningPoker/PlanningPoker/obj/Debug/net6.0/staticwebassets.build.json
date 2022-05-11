@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2V95YrF4io9nE+hn8mdwtClq4Oqm7TVcppkERaoar+Y=",
+  "Hash": "jJd8PjELF6Dzfq7N1yU9AOrA6lSxDct5qW5CwDFo3Dc=",
   "Source": "PlanningPoker",
   "BasePath": "_content/PlanningPoker",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PlanningPoker\\wwwroot",
       "Source": "PlanningPoker",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PlanningPoker.styles.css",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PlanningPoker.styles.css",
       "SourceId": "PlanningPoker",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "PlanningPoker.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PlanningPoker.styles.css"
+      "OriginalItemSpec": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PlanningPoker.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlanningPoker.bundle.scp.css",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlanningPoker.bundle.scp.css",
       "SourceId": "PlanningPoker",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "PlanningPoker.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlanningPoker.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlanningPoker.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\css\\site.css",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\favicon.ico",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Stefan\\Desktop\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
