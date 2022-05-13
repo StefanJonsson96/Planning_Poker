@@ -1,0 +1,69 @@
+﻿@page "/Details"
+@page "/Details/{Id:int}"
+@using PlanningPoker.Driven_Adapters
+@inject ITeamAdapter TeamAdapter
+@inject IJSRuntime JSRuntime
+<h3>Team</h3>
+@if(Id == null)
+{
+    <h3>Create a new Team</h3>
+}
+else
+{
+    <h3>Edit @_Team.Name</h3>
+}
+
+<EditForm Model="_Team" OnValidSubmit="HandleSubmit">
+    <div>
+        <label for="name">Name</label>
+        <InputText id="Name" @bind-Value="_Team.Name" class="form-control"></InputText>
+        <DataAnnotationsValidator />  
+        <ValidationSummary />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">@btnText</button>
+    @if (Id != null)
+    {
+        <button type="button" class="btn btn-danger" @onclick="DeleteTeam">Delete Team</button>
+    }
+</EditForm>
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    string btnText = String.Empty;
+
+    Team _Team = new Team();
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Save New Team" : "Update Team";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            _Team = await TeamAdapter.ReadTeamSingle((int)Id);
+        }
+    }
+    async Task HandleSubmit()
+    {
+        if (Id == null)
+        {
+            await TeamAdapter.CreateTeam(_Team);
+        }
+        else
+        {
+            await TeamAdapter.UpdateTeam(_Team, (int)Id);
+        }
+    }
+
+    async Task DeleteTeam()
+    {
+         if (!await JSRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete the team '{_Team.Name}'?"))
+            return;
+
+        await TeamAdapter.DeleteTeam(_Team.Id);
+    }
+}

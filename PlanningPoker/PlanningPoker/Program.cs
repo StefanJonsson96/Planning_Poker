@@ -15,7 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("PlanningPokerD
 builder.Services.AddDbContext<PlanningPokerDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<ITest, Test>();
+builder.Services.AddScoped<ITeamAdapter, TeamAdapter>();
+builder.Services.AddScoped<IUserStoryAdapter, UserStoryAdapter>();
 
 
 var app = builder.Build();

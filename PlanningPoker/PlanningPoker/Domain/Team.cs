@@ -8,7 +8,7 @@ namespace PlanningPoker.Domain
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required][MaxLength(25)]
 
         public string Name { get; set; }
 

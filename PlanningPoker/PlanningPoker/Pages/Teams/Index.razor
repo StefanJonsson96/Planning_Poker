@@ -2,29 +2,61 @@
 @using PlanningPoker.Persistence;
 @using PlanningPoker.Shared;
 @page "/Teams/Index"
-@inject ITest Test
+@inject ITeamAdapter TeamAdapter
+@inject NavigationManager navigationManager
 <PageTitle>Teams</PageTitle>
 
 <h1>Teams</h1>
+<table>
+    <thead>
+    <tr style="border: solid 2px black">
+        <th>Namn</th>
 
-Welcome :)
+        <th>Datum skapat</th>
 
-@{int i = 0;}
-@foreach(var team in Test.Team)
-{
-    i++;
+        <th>Id</th>
+
+        <th>Senast uppdaterat</th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach(var team in TeamAdapter.Team)
+{   
     if (team.IsDeleted == false)
-    {
-        <p>Namn: @team.Name</p>
-        <p>Datum skapat: @team.Created</p>
-        <p>Id: @team.Id</p>
-        <p>Senast uppdaterat: @team.Updated</p>
-
-        @* if (inloggad som teamleader){}*@
-        <a href="Teams/Edit">Edit Team</a>
-        <a href="Teams/Delete">Delete Team</a>
+    {   
+        <tr style="border: solid 2px black">
+            <td>    @team.Name
+            </td>           
+            <td>    @team.Created
+            </td>
+            <td>    @team.Id
+            </td>
+            <td>    @team.Updated
+            </td>
+            <td>
+                <button class="btn btn-primary" @onclick="(() => ReadTeamSingle(team.Id))">
+                    <i class="oi oi pencil">Edit</i>
+                </button>
+            </td>
+        </tr>
     }
 }
-<p>@i</p>
-<a href="Teams/Create">Create new Team</a>
+</tbody>
+</table>  
+<button class="btn btn-primary" @onclick="CreateTeam">Create New Team</button>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await TeamAdapter.ReadTeam();
+    }
 
+    void ReadTeamSingle(int id)
+    {
+        navigationManager.NavigateTo($"Details/{id}");
+    }
+
+    void CreateTeam()
+    {
+        navigationManager.NavigateTo("Details");
+    }
+}

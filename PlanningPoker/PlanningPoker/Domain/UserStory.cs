@@ -9,7 +9,7 @@ namespace PlanningPoker.Domain
         [Required]
         public string Title { get; set; }
 
-        [Required]
+        //[Required]
         public Team Team { get; set; }
         [Required]
         public int TeamId { get; set; }
@@ -21,7 +21,7 @@ namespace PlanningPoker.Domain
         public DateTime Created { get; set; }
 
         public DateTime Updated { get; set; }
-
+        [Range(1, 5)]
         public int Priority { get; set; }
 
 

@@ -1,0 +1,77 @@
+﻿@using PlanningPoker.Driven_Adapters;
+@using PlanningPoker.Persistence;
+@using PlanningPoker.Shared;
+@page "/UserStorys/Index"
+@inject IUserStoryAdapter UserStoryAdapter
+@inject NavigationManager navigationManager
+<PageTitle>User Storys</PageTitle>
+
+<h1>User Storys</h1>
+<table>
+    <thead>
+    <tr style="border: solid 2px black">
+        <th>Namn</th>
+
+        <th>Datum skapat</th>
+
+        <th>Id</th>
+
+        <th>Team Id</th>
+
+        <th>Text</th>
+
+        <th>Senast uppdaterat</th>
+
+        <th>Prioritet</th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach(var userStory in UserStoryAdapter.UserStory)
+{   
+    if (userStory.IsDeleted == false)
+    {   
+        <tr style="border: solid 2px black">
+            <td>    @userStory.Title
+            </td>           
+            <td>    @userStory.Created
+            </td>
+            <td>    @userStory.Id
+            </td>
+            <td>
+                    @userStory.TeamId
+            </td>
+            <td>
+                    @userStory.Description
+            </td>
+            <td>    @userStory.Updated
+            </td>
+            <td>
+                    @userStory.Priority
+            </td>
+            <td>
+                <button class="btn btn-primary" @onclick="(() => ReadUserStorySingle(userStory.Id))">
+                    <i class="oi oi pencil">Edit</i>
+                </button>
+            </td>              
+        </tr>
+    }
+}
+</tbody>
+</table>  
+<button class="btn btn-primary" @onclick="CreateUserStory">Create New User Story</button>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await UserStoryAdapter.ReadUserStory();
+    }
+
+    void ReadUserStorySingle(int id)
+    {
+        navigationManager.NavigateTo($"/UserStorys/Details/{id}");
+    }
+
+    void CreateUserStory()
+    {
+        navigationManager.NavigateTo($"/UserStorys/Details");
+    }
+}

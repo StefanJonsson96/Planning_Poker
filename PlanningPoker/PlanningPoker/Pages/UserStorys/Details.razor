@@ -1,0 +1,80 @@
+﻿@page "/UserStorys/Details"
+@page "/UserStorys/Details/{Id:int}"
+@using PlanningPoker.Driven_Adapters
+@inject IUserStoryAdapter UserStoryAdapter
+@inject IJSRuntime JSRuntime
+<h3>User Story</h3>
+@if(Id == null)
+{
+    <h3>Create a new User Story</h3>
+}
+else
+{
+    <h3>Edit @_UserStory.Title</h3>
+}
+
+<EditForm Model="_UserStory" OnValidSubmit="HandleSubmit">
+    <div>
+        <label for="title">Title</label>
+        <InputText id="title" @bind-Value="_UserStory.Title" class="form-control"></InputText>
+        <DataAnnotationsValidator />  
+        <ValidationSummary />
+    </div>
+    <div>
+        <label for="Description">Description</label>
+        <InputText id="Description" @bind-Value=_UserStory.Description class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="Priority">Priority</label>
+        <InputNumber id="Priority"_UserStory.Priority @bind-Value=_UserStory.Priority class="form-control" TValue="int"></InputNumber>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">@btnText</button>
+    @if (Id != null)
+    {
+        <button type="button" class="btn btn-danger" @onclick="DeleteUserStory">Delete User Story</button>
+    }
+</EditForm>
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    string btnText = String.Empty;
+
+    UserStory _UserStory = new UserStory();
+
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Save New User Story" : "Update User Story";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            _UserStory = await UserStoryAdapter.ReadUserStorySingle((int)Id);
+        }
+    }
+    async Task HandleSubmit()
+    {
+        if (Id == null)
+        {
+            _UserStory.TeamId = 1; @* WORKAROUND, kommer använda den inloggade användarens teamid längre fram!*@
+            await UserStoryAdapter.CreateUserStory(_UserStory);
+        }
+        else
+        {
+            _UserStory.TeamId = 1; @* WORKAROUND, kommer använda den inloggade användarens teamid längre fram!*@
+            await UserStoryAdapter.UpdateUserStory(_UserStory, (int)Id);
+        }
+    }
+
+    async Task DeleteUserStory()
+    {
+         if (!await JSRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete the user story '{_UserStory.Title}'?"))
+            return;
+
+        await UserStoryAdapter.DeleteUserStory(_UserStory.Id);
+    }
+}
