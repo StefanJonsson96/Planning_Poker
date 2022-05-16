@@ -27,6 +27,7 @@ namespace PlanningPoker.Driven_Adapters
         public async Task ReadUserStory()
         {
             UserStory = await _context.UserStory.ToListAsync();
+            
 
         }
 

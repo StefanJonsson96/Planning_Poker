@@ -9,12 +9,15 @@ namespace PlanningPoker.Driven_Adapters
     {
         private readonly PlanningPokerDbContext _context;
         private readonly NavigationManager _navigationManager;
+        private readonly IdentityContext _identityContext;
 
-        public TeamAdapter(PlanningPokerDbContext context, NavigationManager navigationManager)
+        public TeamAdapter(PlanningPokerDbContext context, NavigationManager navigationManager, IdentityContext identityContext = null)
         {
             _context = context;
-            _navigationManager = navigationManager;
+            _navigationManager = navigationManager;      
+            _identityContext = identityContext;
             _context.Database.EnsureCreated();
+            _identityContext.Database.EnsureCreated();
         }
         public List<Domain.Team> Team { get; set; } = new List<Domain.Team>();
 
@@ -27,6 +30,7 @@ namespace PlanningPoker.Driven_Adapters
         public async Task ReadTeam()
         {
             Team = await _context.Team.ToListAsync();
+            
 
         }
 

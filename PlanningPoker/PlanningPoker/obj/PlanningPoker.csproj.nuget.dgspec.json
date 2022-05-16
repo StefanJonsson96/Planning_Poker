@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj": {}
+    "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj": {
+    "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj",
+        "projectUniqueName": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj",
         "projectName": "PlanningPoker",
-        "projectPath": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj",
+        "projectPath": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\PlanningPoker.csproj",
         "packagesPath": "C:\\Users\\steps\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steps\\Desktop\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\",
+        "outputPath": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\steps\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,41 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [
