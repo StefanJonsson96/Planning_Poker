@@ -5,7 +5,8 @@ using PlanningPoker;
 using PlanningPoker.Driven_Adapters;
 using PlanningPoker.Persistence;
 using Microsoft.AspNetCore.Identity;
-
+using Microsoft.AspNetCore.Authentication.Cookies;
+using PlanningPoker.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("PlanningPokerDbContext");
@@ -13,7 +14,7 @@ var connectionString = builder.Configuration.GetConnectionString("PlanningPokerD
 builder.Services.AddDbContext<PlanningPokerDbContext>(options =>
     options.UseSqlServer(connectionString));;
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<PlanningPokerUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<IdentityContext>();
 
@@ -32,7 +33,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<ITeamAdapter, TeamAdapter>();
 builder.Services.AddScoped<IUserStoryAdapter, UserStoryAdapter>();
-
+builder.Services.AddAuthentication("Identity.Application")
+                .AddCookie();
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//                .AddCookie();
 
 var app = builder.Build();
 
@@ -50,8 +54,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-app.UseAuthentication();;
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapBlazorHub();
+    endpoints.MapFallbackToPage("/_Host");
+});
 
 app.Run();

@@ -9,12 +9,15 @@ namespace PlanningPoker.Driven_Adapters
     {
         private readonly PlanningPokerDbContext _context;
         private readonly NavigationManager _navigationManager;
+        private readonly IdentityContext _identityContext;
 
-        public UserStoryAdapter(PlanningPokerDbContext context, NavigationManager navigationManager)
+        public UserStoryAdapter(PlanningPokerDbContext context, NavigationManager navigationManager, IdentityContext identityContext)
         {
             _context = context;
             _navigationManager = navigationManager;
-            _context.Database.EnsureCreated();
+            _identityContext = identityContext;
+            //_identityContext.Database.EnsureCreated();
+            //_context.Database.EnsureCreated();
         }
         public List<Domain.UserStory> UserStory { get; set; } = new List<Domain.UserStory>();
 

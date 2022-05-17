@@ -46,5 +46,58 @@ namespace PlanningPoker.Persistence
 
                 );
         }
+        public static void SeedUser(this ModelBuilder modelBuilder)
+        {
+            PlanningPokerUser Stefan = new PlanningPokerUser()
+            {
+                Id = "b74ddd14-6340-4840-95c2-db12554843e5",
+                UserName = "admin@pp.com",
+                NormalizedUserName = "ADMIN@PP.COM",
+                Email = "admin@pp.com",
+                NormalizedEmail = "ADMIN@PP.COM",
+                Name = "Stefan Jonsson",
+                LockoutEnabled = false,
+                PhoneNumber = "1234567890",
+                // ImagePath = "/images/Users/admin.png", WIP
+                DOB = new DateTime(1996, 08, 01)
+            };
+
+            PlanningPokerUser TeamLeader = new PlanningPokerUser()
+            {
+                Id = "TeamLeader",
+                UserName = "tl@pp.com",
+                NormalizedUserName = "TL@PP.COM",
+                Email = "tl@coolbooks.com",
+                NormalizedEmail = "TL@PP.COM",
+                Name = "Team Leader",
+                LockoutEnabled = false,
+                PhoneNumber = "5559561190",
+                // ImagePath = "/images/Users/admin.png", WIP
+                DOB = new DateTime(1973, 03, 13)
+            };
+
+            PasswordHasher<PlanningPokerUser> passwordHasher = new PasswordHasher<PlanningPokerUser>();
+            Stefan.PasswordHash = passwordHasher.HashPassword(Stefan, ".");
+            TeamLeader.PasswordHash = passwordHasher.HashPassword(TeamLeader, ".");
+
+            modelBuilder.Entity<PlanningPokerUser>().HasData(Stefan, TeamLeader);
+        }
+        public static void SeedRole(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityRole>()
+                        .HasData(
+                        new IdentityRole { Id = "inz5jyo9-c546-41de-aebc-a14da6895711", Name="Admin", ConcurrencyStamp = "1", NormalizedName ="Admin" },
+                        new IdentityRole { Id = "dca3qpo1-c546-41de-aebc-a14da6895711", Name = "TeamLeader", ConcurrencyStamp = "2", NormalizedName = "TeamLeader" }
+
+                );
+        }
+        public static void SeedUserRole(this ModelBuilder modelBuilder)
+        {
+                modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>() { RoleId = "inz5jyo9-c546-41de-aebc-a14da6895711", UserId = "b74ddd14-6340-4840-95c2-db12554843e5" },
+                new IdentityUserRole<string>() { RoleId = "dca3qpo1-c546-41de-aebc-a14da6895711", UserId =  "TeamLeader"}
+                );
+        }
+
     }
 }

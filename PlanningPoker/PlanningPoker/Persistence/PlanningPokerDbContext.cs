@@ -1,8 +1,11 @@
 ﻿#nullable disable
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PlanningPoker.Domain;
+
 namespace PlanningPoker.Persistence
 {
-    public class PlanningPokerDbContext : DbContext // : IdentityDbContext<aspnetuser>
+    public class PlanningPokerDbContext : IdentityDbContext<PlanningPokerUser> // : IdentityDbContext<aspnetuser>
     {
         public DbSet<Domain.Game> Game { get; set; }
         public DbSet<Domain.Round> Round { get; set; }
@@ -50,13 +53,14 @@ namespace PlanningPoker.Persistence
                                       .Property(us => us.Created)
                                       .HasDefaultValueSql("getdate()");
 
-            //modelBuilder.Entity<aspnetuser>()
-            //            .Property(d => d.ImagePath).HasDefaultValue("");
+            modelBuilder.Entity<PlanningPokerUser>()
+                        .Property(d => d.ImagePath).HasDefaultValue("");
 
             modelBuilder.SeedTeam();
             modelBuilder.SeedUserStory();
             //modelBuilder.SeedRound();
             //modelBuilder.SeedGame();
+
 
         }
     }

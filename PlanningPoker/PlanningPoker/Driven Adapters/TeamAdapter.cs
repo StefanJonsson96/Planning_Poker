@@ -11,13 +11,13 @@ namespace PlanningPoker.Driven_Adapters
         private readonly NavigationManager _navigationManager;
         private readonly IdentityContext _identityContext;
 
-        public TeamAdapter(PlanningPokerDbContext context, NavigationManager navigationManager, IdentityContext identityContext = null)
+        public TeamAdapter(PlanningPokerDbContext context, NavigationManager navigationManager, IdentityContext identityContext)
         {
             _context = context;
             _navigationManager = navigationManager;      
             _identityContext = identityContext;
-            _context.Database.EnsureCreated();
-            _identityContext.Database.EnsureCreated();
+            //_context.Database.EnsureCreated();
+            //_identityContext.Database.EnsureCreated();
         }
         public List<Domain.Team> Team { get; set; } = new List<Domain.Team>();
 

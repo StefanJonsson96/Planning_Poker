@@ -1,12 +1,49 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Identity.EntityFrameworkCore
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@* @inject SignInManager<IdentityUser> SignInManager Kan inte använda signinmanager i blazor server*@
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">PlanningPoker</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-</div>
+</div> 
+@code{
+    bool loggedIn;
+    string role;
+    protected override async Task OnInitializedAsync()  
+    {  
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)  
+        {
 
+            loggedIn = true;
+
+            if (user.IsInRole("Admin"))
+            {
+                role = "Admin";
+            }
+            else if (user.IsInRole("TeamLeader"))
+            {
+                role = "TeamLeader";
+            }
+            else
+            {
+                role = "User";
+            }
+        }  
+        else  
+        {
+
+            loggedIn = false;
+        } 
+
+        
+    }  
+}  
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
@@ -19,6 +56,37 @@
             <NavLink class="nav-link" href="/UserStorys/Index" Match="NavLinkMatch.All">
                 <span class="oi oi-menu" aria-hidden="true"</span> User Storys
             </NavLink>
+            @{
+                if (loggedIn == false)
+                {
+                    <NavLink class="nav-link" href="/Account/Login" Match="NavLinkMatch.All">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Log in    
+                    </NavLink>
+                }
+                else
+                {
+                    <NavLink class="nav-link" href="/Account/Logout" Match="NavLinkMatch.All">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Log Out    
+                    </NavLink>
+                }
+                if (role ==  "Admin")
+                {
+                    <p>Du är inloggad som Admin</p>
+                }
+                else if (role == "TeamLeader")
+                {
+                    <p>Du är inloggad som TeamLeader</p>
+                }
+                else if (role == "User")
+                {
+                    <p>Du är inloggad som User</p>
+                }
+                else
+                {
+                    <p>Du är inte inloggad</p>
+                }
+             }
+            
         </div>
     </nav>
 </div>
