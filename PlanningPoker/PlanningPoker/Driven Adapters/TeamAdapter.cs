@@ -29,9 +29,9 @@ namespace PlanningPoker.Driven_Adapters
         }
         public async Task ReadTeam()
         {
+            //System.Threading.Thread.Sleep(3000);
             Team = await _context.Team.ToListAsync();
             
-
         }
 
         public async Task<Team> ReadTeamSingle(int id)

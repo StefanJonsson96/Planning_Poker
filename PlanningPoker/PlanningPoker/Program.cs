@@ -7,6 +7,7 @@ using PlanningPoker.Persistence;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using PlanningPoker.Domain;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("PlanningPokerDbContext");
@@ -31,6 +32,7 @@ builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(c
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddMudServices();
 builder.Services.AddScoped<ITeamAdapter, TeamAdapter>();
 builder.Services.AddScoped<IUserStoryAdapter, UserStoryAdapter>();
 builder.Services.AddAuthentication("Identity.Application")

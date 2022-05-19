@@ -1,6 +1,8 @@
 ﻿#nullable disable
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using PlanningPoker.Domain;
 
 namespace PlanningPoker.Persistence
@@ -15,9 +17,7 @@ namespace PlanningPoker.Persistence
         public PlanningPokerDbContext(DbContextOptions<PlanningPokerDbContext> options)
             : base(options)
         {
-
             Database.EnsureCreated();
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

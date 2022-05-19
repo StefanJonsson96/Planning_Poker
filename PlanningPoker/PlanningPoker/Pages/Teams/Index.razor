@@ -1,12 +1,19 @@
-﻿@using PlanningPoker.Driven_Adapters;
+﻿@using MudBlazor
+@using PlanningPoker.Driven_Adapters;
 @using PlanningPoker.Persistence;
 @using PlanningPoker.Shared;
 @page "/Teams/Index"
 @inject ITeamAdapter TeamAdapter
 @inject NavigationManager navigationManager
+@* @attribute [Authorize(Roles = "Admin, TeamLeader")] **Fix this** *@ 
 <PageTitle>Teams</PageTitle>
 
 <h1>Teams</h1>
+@if (TeamAdapter.Team == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else {
 <table>
     <thead>
     <tr style="border: solid 2px black">
@@ -19,37 +26,40 @@
         <th>Senast uppdaterat</th>
     </tr>
     </thead>
-    <tbody>
-@foreach(var team in TeamAdapter.Team)
-{   
-    if (team.IsDeleted == false)
-    {   
-        <tr style="border: solid 2px black">
-            <td>    @team.Name
-            </td>           
-            <td>    @team.Created
-            </td>
-            <td>    @team.Id
-            </td>
-            <td>    @team.Updated
-            </td>
-            <td>
-                <button class="btn btn-primary" @onclick="(() => ReadTeamSingle(team.Id))">
-                    <i class="oi oi pencil">Edit</i>
-                </button>
-            </td>
-        </tr>
-    }
-}
-</tbody>
+    <tbody>           
+            @foreach (var team in TeamAdapter.Team)
+            {
+
+
+                if (team.IsDeleted == false)
+                {
+                    <tr style="border: solid 2px black">
+                        <td>    @team.Name
+                        </td>           
+                        <td>    @team.Created
+                        </td>
+                        <td>    @team.Id
+                        </td>
+                        <td>    @team.Updated
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" @onclick="(() => ReadTeamSingle(team.Id))">
+                                <i class="oi oi pencil">Edit</i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
 </table>  
 <button class="btn btn-primary" @onclick="CreateTeam">Create New Team</button>
+}
 @code {
     protected override async Task OnInitializedAsync()
-    {
+    {     
         await TeamAdapter.ReadTeam();
+        
     }
-
     void ReadTeamSingle(int id)
     {
         navigationManager.NavigateTo($"Details/{id}");

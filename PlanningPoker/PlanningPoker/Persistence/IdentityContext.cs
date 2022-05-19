@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using PlanningPoker.Domain;
 
 namespace PlanningPoker.Persistence;
@@ -10,6 +12,11 @@ public class IdentityContext : IdentityDbContext<PlanningPokerUser>
     public IdentityContext(DbContextOptions<IdentityContext> options)
         : base(options)
     {
+        //RelationalDatabaseCreator databaseCreator =
+        //    (RelationalDatabaseCreator)Database.GetService<IDatabaseCreator>();
+        //databaseCreator.CreateTables();
+
+
         Database.EnsureCreated();
     }
 
