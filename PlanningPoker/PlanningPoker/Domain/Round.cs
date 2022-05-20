@@ -12,8 +12,8 @@ namespace PlanningPoker.Domain
         [Required]
         public int GameId { get; set; }
 
-        //[ForeignKey("PlayedBy")]
-        //public virtual aspnetuser aspnetuser { get; set; }
+        [ForeignKey("PlayedBy")]
+        public virtual PlanningPokerUser PlanningPokerUser { get; set; }
 
         [Required]
         public int Points { get; set; }

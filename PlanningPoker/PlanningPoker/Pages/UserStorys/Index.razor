@@ -4,25 +4,26 @@
 @page "/UserStorys/Index"
 @inject IUserStoryAdapter UserStoryAdapter
 @inject NavigationManager navigationManager
+@attribute [Authorize(Roles = "Admin, TeamLeader")]
 <PageTitle>User Storys</PageTitle>
 
 <h1>User Storys</h1>
 <table>
     <thead>
     <tr style="border: solid 2px black">
-        <th>Namn</th>
+        <th style="border: solid 2px black">Namn</th>
 
-        <th>Datum skapat</th>
+        <th style="border: solid 2px black">Datum skapat</th>
 
-        <th>Id</th>
+        <th style="border: solid 2px black">Id</th>
 
-        <th>Team Id</th>
+        <th style="border: solid 2px black">Team Id</th>
 
-        <th>Text</th>
+        <th style="border: solid 2px black">Text</th>
 
-        <th>Senast uppdaterat</th>
+        <th style="border: solid 2px black">Senast uppdaterat</th>
 
-        <th>Prioritet</th>
+        <th style="border: solid 2px black">Prioritet</th>
     </tr>
     </thead>
     <tbody>
@@ -31,28 +32,33 @@
     if (userStory.IsDeleted == false)
     {   
         <tr style="border: solid 2px black">
-            <td>    @userStory.Title
+            <td style="border: solid 2px black">    @userStory.Title
             </td>           
-            <td>    @userStory.Created
+            <td style="border: solid 2px black">    @userStory.Created
             </td>
-            <td>    @userStory.Id
+            <td style="border: solid 2px black">    @userStory.Id
             </td>
-            <td>
+            <td style="border: solid 2px black">
                     @userStory.TeamId
             </td>
-            <td>
+            <td style="border: solid 2px black">
                     @userStory.Description
             </td>
-            <td>    @userStory.Updated
+            <td style="border: solid 2px black">    @userStory.Updated
             </td>
-            <td>
+            <td style="border: solid 2px black">
                     @userStory.Priority
             </td>
-            <td>
+            
                 <button class="btn btn-primary" @onclick="(() => ReadUserStorySingle(userStory.Id))">
                     <i class="oi oi pencil">Edit</i>
                 </button>
-            </td>              
+                          
+            
+                <button class="btn btn-primary" @onclick="(() => PlayGame(userStory.Id))">
+                    <i class="oi oi pencil">Play Planning Poker</i>
+                </button>
+            
         </tr>
     }
 }
@@ -73,5 +79,10 @@
     void CreateUserStory()
     {
         navigationManager.NavigateTo($"/UserStorys/Details");
+    }
+
+    void PlayGame(int id)
+    {
+        navigationManager.NavigateTo($"/UserStorys/Play/{id}");
     }
 }

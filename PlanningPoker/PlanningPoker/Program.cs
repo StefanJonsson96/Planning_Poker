@@ -35,6 +35,8 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
 builder.Services.AddScoped<ITeamAdapter, TeamAdapter>();
 builder.Services.AddScoped<IUserStoryAdapter, UserStoryAdapter>();
+builder.Services.AddScoped<IIndexAdapter, IndexAdapter>();
+builder.Services.AddScoped<IUserAdapter, UserAdapter>();
 builder.Services.AddAuthentication("Identity.Application")
                 .AddCookie();
 //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

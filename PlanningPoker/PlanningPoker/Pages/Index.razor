@@ -2,6 +2,8 @@
 @using PlanningPoker.Persistence;
 @using PlanningPoker.Shared;
 @page "/"
+@inject IIndexAdapter IndexAdapter
+@inject NavigationManager navigationManager
 <PageTitle>Planning Poker</PageTitle>
 
 <h1>Planning Poker</h1>

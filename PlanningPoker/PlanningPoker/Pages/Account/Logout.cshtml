@@ -1,5 +1,7 @@
 ﻿@page
+@using Microsoft.AspNetCore.Components
 @model LogoutModel
+@inject NavigationManager navigationManager
 @{
     ViewData["Title"] = "Log out";
 }
@@ -16,6 +18,8 @@
         else
         {
             <p>You have successfully logged out of the application.</p>
+            <p>Hallå????</p>
+            //navigationManager.NavigateTo($"/");
         }
     }
 </header>

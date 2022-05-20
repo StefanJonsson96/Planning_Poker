@@ -34,14 +34,12 @@
             {
                 role = "User";
             }
-        }  
-        else  
-        {
+            }  
+            else  
+            {
 
-            loggedIn = false;
-        } 
-
-        
+                loggedIn = false;
+            }   
     }  
 }  
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
@@ -50,43 +48,36 @@
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Planning Poker
             </NavLink>
-            <NavLink class="nav-link" href="/Teams/Index" Match="NavLinkMatch.All">
-                <span class="oi oi-menu" aria-hidden="true"></span> Teams
-            </NavLink>
-            <NavLink class="nav-link" href="/UserStorys/Index" Match="NavLinkMatch.All">
-                <span class="oi oi-menu" aria-hidden="true"</span> User Storys
-            </NavLink>
             @{
-                if (loggedIn == false)
-                {
-                    <NavLink class="nav-link" href="/Account/Login" Match="NavLinkMatch.All">
-                        <span class="oi oi-list-rich" aria-hidden="true"></span> Log in    
-                    </NavLink>
-                }
-                else
-                {
-                    <NavLink class="nav-link" href="/Account/Logout" Match="NavLinkMatch.All">
-                        <span class="oi oi-list-rich" aria-hidden="true"></span> Log Out    
-                    </NavLink>
-                }
-                if (role ==  "Admin")
-                {
-                    <p>Du är inloggad som Admin</p>
-                }
-                else if (role == "TeamLeader")
-                {
-                    <p>Du är inloggad som TeamLeader</p>
-                }
-                else if (role == "User")
-                {
-                    <p>Du är inloggad som User</p>
-                }
-                else
-                {
-                    <p>Du är inte inloggad</p>
-                }
-             }
+            if (role == "Admin")
+            {
+                <NavLink class="nav-link" href="/Teams/Index" Match="NavLinkMatch.All">
+                    <span class="oi oi-menu" aria-hidden="true"></span> Teams
+                </NavLink>
+            }
+            if (role == "TeamLeader" || role == "Admin")
+            {
+                <NavLink class="nav-link" href="/UserStorys/Index" Match="NavLinkMatch.All">
+                    <span class="oi oi-menu" aria-hidden="true"></span> User Storys
+                </NavLink>
+            }           
             
+            if (loggedIn == false)
+            {
+                <NavLink style="" class="nav-link" href="Identity/Account/Login" Match="NavLinkMatch.All">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Log in    
+                </NavLink>
+            }
+            else
+            {
+                <NavLink style="" class="nav-link" href="/Account/Profile" Match="NavLinkMatch.All">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> My Profile    
+                </NavLink>
+                <NavLink style="" class="nav-link" href="Identity/Account/Logout" Match="NavLinkMatch.All">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Log Out    
+                </NavLink>
+            }                
+            }            
         </div>
     </nav>
 </div>

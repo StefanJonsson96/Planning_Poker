@@ -679,3 +679,12 @@ C:\Users\Stefan\Desktop\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net
 C:\Users\Stefan\Desktop\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.JSInterop.dll
 C:\Users\Stefan\Desktop\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\MudBlazor.dll
 C:\Users\Stefan\Desktop\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\MudBlazor.dll
+C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\bin\Debug\net6.0\System.IO.Pipelines.dll

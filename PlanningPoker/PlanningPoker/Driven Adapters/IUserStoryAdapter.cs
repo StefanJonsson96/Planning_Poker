@@ -11,6 +11,7 @@ namespace PlanningPoker.Driven_Adapters
         Task<UserStory> ReadUserStorySingle(int id);
         Task UpdateUserStory(Domain.UserStory userstory, int id);
         Task DeleteUserStory(int id);
+        Task PlayGame(int id);
     }
 
 }

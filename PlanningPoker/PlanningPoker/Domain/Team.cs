@@ -16,9 +16,9 @@ namespace PlanningPoker.Domain
         public DateTime Created { get; set; }
 
         public DateTime Updated { get; set; }
-        //[Required]
 
-        //public <List><aspnetuser> Members { get; set; }
+        //[Required]
+        //public List<PlanningPokerUser> Members { get; set; }
 
         [Required]
         public bool IsDeleted { get; set; }

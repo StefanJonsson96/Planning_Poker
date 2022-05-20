@@ -58,7 +58,8 @@ namespace PlanningPoker.Persistence
                 Name = "Stefan Jonsson",
                 LockoutEnabled = false,
                 PhoneNumber = "1234567890",
-                // ImagePath = "/images/Users/admin.png", WIP
+                TeamId = 2,
+                ImagePath = "/images/admin.png",
                 DOB = new DateTime(1996, 08, 01)
             };
 
@@ -72,6 +73,7 @@ namespace PlanningPoker.Persistence
                 Name = "Team Leader",
                 LockoutEnabled = false,
                 PhoneNumber = "5559561190",
+                TeamId = 1,
                 // ImagePath = "/images/Users/admin.png", WIP
                 DOB = new DateTime(1973, 03, 13)
             };

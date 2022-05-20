@@ -5,25 +5,20 @@
 @page "/Teams/Index"
 @inject ITeamAdapter TeamAdapter
 @inject NavigationManager navigationManager
-@* @attribute [Authorize(Roles = "Admin, TeamLeader")] **Fix this** *@ 
+@attribute [Authorize(Roles = "Admin")]
 <PageTitle>Teams</PageTitle>
 
 <h1>Teams</h1>
-@if (TeamAdapter.Team == null)
-{
-    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
-}
-else {
 <table>
     <thead>
     <tr style="border: solid 2px black">
-        <th>Namn</th>
+        <th style="border: solid 2px black">Namn</th>
 
         <th>Datum skapat</th>
 
-        <th>Id</th>
+        <th style="border: solid 2px black">Id</th>
 
-        <th>Senast uppdaterat</th>
+        <th style="border: solid 2px black">Senast uppdaterat</th>
     </tr>
     </thead>
     <tbody>           
@@ -34,13 +29,13 @@ else {
                 if (team.IsDeleted == false)
                 {
                     <tr style="border: solid 2px black">
-                        <td>    @team.Name
+                        <td style="border: solid 2px black">    @team.Name
                         </td>           
                         <td>    @team.Created
                         </td>
-                        <td>    @team.Id
+                        <td style="border: solid 2px black">    @team.Id
                         </td>
-                        <td>    @team.Updated
+                        <td style="border: solid 2px black">    @team.Updated
                         </td>
                         <td>
                             <button class="btn btn-primary" @onclick="(() => ReadTeamSingle(team.Id))">
@@ -53,7 +48,6 @@ else {
         </tbody>
 </table>  
 <button class="btn btn-primary" @onclick="CreateTeam">Create New Team</button>
-}
 @code {
     protected override async Task OnInitializedAsync()
     {     

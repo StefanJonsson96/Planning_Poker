@@ -3,6 +3,7 @@
 @using PlanningPoker.Driven_Adapters
 @inject ITeamAdapter TeamAdapter
 @inject IJSRuntime JSRuntime
+@attribute [Authorize(Roles = "Admin")]
 <h3>Team</h3>
 @if(Id == null)
 {

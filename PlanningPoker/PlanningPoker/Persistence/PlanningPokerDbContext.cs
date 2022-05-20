@@ -58,6 +58,9 @@ namespace PlanningPoker.Persistence
 
             modelBuilder.SeedTeam();
             modelBuilder.SeedUserStory();
+            modelBuilder.SeedUser();
+            modelBuilder.SeedRole();
+            modelBuilder.SeedUserRole();
             //modelBuilder.SeedRound();
             //modelBuilder.SeedGame();
 

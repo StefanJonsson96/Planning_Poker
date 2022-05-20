@@ -25,7 +25,7 @@ namespace PlanningPoker.Domain
         [Required]
         public bool IsDeleted { get; set; }
 
-        //[ForeignKey("CreatedBy")]
-        //public virtual aspnetuser aspnetuser { get; set; }
+        [ForeignKey("CreatedBy")]
+        public virtual PlanningPokerUser PlanningPokerUser { get; set; }
     }
 }

@@ -1,0 +1,50 @@
+﻿@page "/Account/Profile"
+@using Microsoft.AspNetCore.Components
+@using MudBlazor
+@using PlanningPoker.Driven_Adapters;
+@using PlanningPoker.Persistence;
+@using PlanningPoker.Shared;
+@inject IUserAdapter UserAdapter
+@inject NavigationManager navigationManager
+
+<div class="row no-gutters">
+<div>
+@{
+if (@UserAdapter.PlanningPokerUser.ImagePath == "")
+{
+    <img src="/images/default.png" style="width: 500px; height: 500px"/> @*Standard profilbild*@
+}
+else 
+{
+    <img src="@UserAdapter.PlanningPokerUser.ImagePath" style="width: 500px; height: 500px"/> @*Profilbild om man har en.*@
+}
+}
+</div>
+<div class="col-md-4">
+<p><b>Namn:</b> @UserAdapter.PlanningPokerUser.Name</p>
+</div>
+<div class="col-md-8">
+<p><b>Födelsedatum:</b> @UserAdapter.PlanningPokerUser.DOB</p>
+</div>
+<div class="col-md-4">
+<p><b>Email:</b> @UserAdapter.PlanningPokerUser.Email</p>
+</div>
+<div class="col-md-8">
+<p><b>Telefon-Nummer:</b> @UserAdapter.PlanningPokerUser.PhoneNumber</p>
+</div>
+<div class="col-md-4">
+<p><b>Team:</b> @UserAdapter.TeamName</p>
+</div>
+<div>
+<a class="btn btn-primary" href="/Account/Manage/Edit">
+<i class="oi oi pencil">Edit</i>
+</a> 
+</div>
+</div>
+@code{
+    protected override async Task OnInitializedAsync()
+    {     
+        await UserAdapter.ReadUser();
+        await UserAdapter.ReadTeam();
+    }
+}

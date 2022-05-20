@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <Folder Include="Driving Adapters\" />
+    <Folder Include="Pages\Games\" />
+    <Folder Include="Pages\Rounds\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,6 +3,7 @@
 @using PlanningPoker.Driven_Adapters
 @inject IUserStoryAdapter UserStoryAdapter
 @inject IJSRuntime JSRuntime
+@attribute [Authorize(Roles = "Admin, TeamLeader")]
 <h3>User Story</h3>
 @if(Id == null)
 {
