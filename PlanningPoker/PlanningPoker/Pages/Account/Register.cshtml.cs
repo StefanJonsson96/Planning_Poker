@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using PlanningPoker.Domain;
+using PlanningPoker.Persistence;
 
 namespace PlanningPoker.Areas.Identity.Pages.Account
 {
@@ -30,13 +31,15 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<PlanningPokerUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly PlanningPokerDbContext _context;
 
         public RegisterModel(
             UserManager<PlanningPokerUser> userManager,
             IUserStore<PlanningPokerUser> userStore,
             SignInManager<PlanningPokerUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            PlanningPokerDbContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +47,7 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context; 
         }
 
         /// <summary>
@@ -98,6 +102,25 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Phone]
+            [Display(Name = "Phone number")]
+            public string PhoneNumber { get; set; }
+
+            [Required]
+            [PersonalData]
+            [Display(Name = "Full Name")]
+            public string? Name { get; set; }
+
+            [Required]
+            [PersonalData]
+            [Display(Name = "Date of birth")]
+            public DateTime DOB { get; set; }
+
+
+            public string TeamName { get; set; }
+
+            public int TeamId { get; set; }
         }
 
 
@@ -113,8 +136,21 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                var team = _context.Team
+                               .Where(t => t.Name == Input.TeamName)
+                               .FirstOrDefault();
 
+                var user = new PlanningPokerUser
+                {
+                    UserName = Input.Email,
+                    Email = Input.Email,
+                    DOB = Input.DOB,
+                    Name = Input.Name,
+                    PhoneNumber = Input.PhoneNumber,
+                    TeamId = team.Id
+
+                };
+                
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

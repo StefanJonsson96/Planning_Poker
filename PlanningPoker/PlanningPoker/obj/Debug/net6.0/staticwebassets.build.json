@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4RfBp634Oh9GZe3P5fuTt7QGpUr3zu/feLvKUUsnO7M=",
+  "Hash": "zJmJSRrSfZh6DAQrnd6O2Ubh/XUrp/o12AqbMoQ3Urw=",
   "Source": "PlanningPoker",
   "BasePath": "_content/PlanningPoker",
   "Mode": "Default",
@@ -1326,12 +1326,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\admin.png",
+      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\Users\\admin.png",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
-      "RelativePath": "images/admin.png",
+      "RelativePath": "images/Users/admin.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1340,15 +1340,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\admin.png"
+      "OriginalItemSpec": "wwwroot\\images\\Users\\admin.png"
     },
     {
-      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\default.png",
+      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\Users\\b74ddd14-6340-4840-95c2-db12554843e5.jpg",
       "SourceId": "PlanningPoker",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
       "BasePath": "_content/PlanningPoker",
-      "RelativePath": "images/default.png",
+      "RelativePath": "images/Users/b74ddd14-6340-4840-95c2-db12554843e5.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1357,7 +1357,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\default.png"
+      "OriginalItemSpec": "wwwroot\\images\\Users\\b74ddd14-6340-4840-95c2-db12554843e5.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\Users\\b74ddd14-6340-4840-95c2-db12554843e5.png",
+      "SourceId": "PlanningPoker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "BasePath": "_content/PlanningPoker",
+      "RelativePath": "images/Users/b74ddd14-6340-4840-95c2-db12554843e5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Users\\b74ddd14-6340-4840-95c2-db12554843e5.png"
+    },
+    {
+      "Identity": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\images\\Users\\default.png",
+      "SourceId": "PlanningPoker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\steps\\source\\repos\\Planning_Poker\\PlanningPoker\\PlanningPoker\\wwwroot\\",
+      "BasePath": "_content/PlanningPoker",
+      "RelativePath": "images/Users/default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Users\\default.png"
     }
   ]
 }

@@ -59,7 +59,7 @@ namespace PlanningPoker.Persistence
                 LockoutEnabled = false,
                 PhoneNumber = "1234567890",
                 TeamId = 2,
-                ImagePath = "/images/admin.png",
+                ImagePath = "/images/Users/admin.png",
                 DOB = new DateTime(1996, 08, 01)
             };
 

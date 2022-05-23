@@ -6,13 +6,12 @@
 @using PlanningPoker.Shared;
 @inject IUserAdapter UserAdapter
 @inject NavigationManager navigationManager
-
 <div class="row no-gutters">
 <div>
 @{
-if (@UserAdapter.PlanningPokerUser.ImagePath == "")
+if (@UserAdapter.PlanningPokerUser.ImagePath == "" || @UserAdapter.PlanningPokerUser.ImagePath == null)
 {
-    <img src="/images/default.png" style="width: 500px; height: 500px"/> @*Standard profilbild*@
+    <img src="/images/Users/default.png" style="width: 500px; height: 500px"/> @*Standard profilbild*@
 }
 else 
 {

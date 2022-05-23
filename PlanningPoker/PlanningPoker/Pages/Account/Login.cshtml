@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Log in";
+    Layout = "../_Layout.cshtml";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -46,9 +47,10 @@
                     </p>
                 </div>
             </form>
+            <a href="../">Go Back</a>
         </section>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    @*<div class="col-md-6 col-md-offset-2">
         <section>
             <h3>Use another service to log in.</h3>
             <hr />
@@ -77,9 +79,10 @@
                 }
             }
         </section>
-    </div>
+    </div>*@
 </div>
 
-@section Scripts {
+@*@section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+*@
