@@ -32,6 +32,7 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly PlanningPokerDbContext _context;
+        public List<Team> _team;
 
         public RegisterModel(
             UserManager<PlanningPokerUser> userManager,
@@ -47,7 +48,8 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-            _context = context; 
+            _context = context;
+            _team = _context.Team.ToList();
         }
 
         /// <summary>

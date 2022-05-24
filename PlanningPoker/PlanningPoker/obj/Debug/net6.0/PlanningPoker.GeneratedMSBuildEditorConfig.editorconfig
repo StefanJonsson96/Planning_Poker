@@ -8,225 +8,225 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PlanningPoker
 build_property.RootNamespace = PlanningPoker
-build_property.ProjectDir = C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\
+build_property.ProjectDir = C:\Users\Stefan\source\repos\Planning_Poker\PlanningPoker\PlanningPoker\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\steps\source\repos\Planning_Poker\PlanningPoker\PlanningPoker
+build_property.MSBuildProjectDirectory = C:\Users\Stefan\source\repos\Planning_Poker\PlanningPoker\PlanningPoker
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/App.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Profile.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxQcm9maWxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Index.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Details.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhbXNcRGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Index.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Teams/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhbXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/UserStorys/Details.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/UserStorys/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclN0b3J5c1xEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/UserStorys/Index.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/UserStorys/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclN0b3J5c1xJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/SurveyPrompt.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/_Imports.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/MainLayout.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-72ko8cl7fh
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/NavMenu.razor]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7pw58fdxix
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/AccessDenied.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ConfirmEmailChange.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ExternalLogin.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Lockout.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Login.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/LoginWith2fa.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/LoginWithRecoveryCode.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Logout.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/DeletePersonalData.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Disable2fa.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Edit.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Email.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ExternalLogins.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/PersonalData.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/SetPassword.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_StatusMessage.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Register.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResendEmailConfirmation.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResetPassword.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResetPasswordConfirmation.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/_StatusMessage.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Error.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_Layout.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Host.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Layout.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steps/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_ViewImports.cshtml]
+[C:/Users/Stefan/source/repos/Planning_Poker/PlanningPoker/PlanningPoker/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
