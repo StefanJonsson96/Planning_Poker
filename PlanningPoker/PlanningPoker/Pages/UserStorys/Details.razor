@@ -2,6 +2,7 @@
 @page "/UserStorys/Details/{Id:int}"
 @using PlanningPoker.Driven_Adapters
 @inject IUserStoryAdapter UserStoryAdapter
+@inject IPlanningPokerAdapter PlanningPokerAdapter
 @inject IJSRuntime JSRuntime
 @attribute [Authorize(Roles = "Admin, TeamLeader")]
 <h3>User Story</h3>

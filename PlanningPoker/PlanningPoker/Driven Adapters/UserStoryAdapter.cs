@@ -20,10 +20,11 @@ namespace PlanningPoker.Driven_Adapters
             _navigationManager = navigationManager;
             _identityContext = identityContext;
             _AuthenticationStateProvider = AuthenticationStateProvider;
-        //_identityContext.Database.EnsureCreated();
-        //_context.Database.EnsureCreated();
-    }
+            //_identityContext.Database.EnsureCreated();
+            //_context.Database.EnsureCreated();
+        }
         public List<Domain.UserStory> UserStory { get; set; } = new List<Domain.UserStory>();
+        public int TeamId { get; set; }
 
         public async Task CreateUserStory(Domain.UserStory userstory)
         {
@@ -42,6 +43,8 @@ namespace PlanningPoker.Driven_Adapters
                                   .Where(u => u.UserName == name)
                                   .FirstAsync();
 
+
+            TeamId = user.TeamId;
 
             UserStory = await _context.UserStory
                                       .Where(t => t.TeamId == user.TeamId)

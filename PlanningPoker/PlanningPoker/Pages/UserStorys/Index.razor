@@ -3,6 +3,7 @@
 @using PlanningPoker.Shared;
 @page "/UserStorys/Index"
 @inject IUserStoryAdapter UserStoryAdapter
+@inject IPlanningPokerAdapter PlanningPokerAdapter
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles = "Admin, TeamLeader")]
 <PageTitle>User Storys</PageTitle>
@@ -55,8 +56,8 @@
                 </button>
                           
             
-                <button class="btn btn-primary" @onclick="(() => PlayGame(userStory.Id))">
-                    <i class="oi oi pencil">Play Planning Poker</i>
+                <button class="btn btn-primary" @onclick="(() => CreateGame(UserStoryAdapter.TeamId, userStory.Id))">
+                    <i class="oi oi pencil">Create a game for this Story</i>
                 </button>
             
         </tr>
@@ -81,8 +82,8 @@
         navigationManager.NavigateTo($"/UserStorys/Details");
     }
 
-    void PlayGame(int id)
+    void CreateGame(int teamid, int userStoryId)
     {
-        navigationManager.NavigateTo($"/UserStorys/Play/{id}");
+        PlanningPokerAdapter.CreateGame(teamid, userStoryId);
     }
 }

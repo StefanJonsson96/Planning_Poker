@@ -1,0 +1,81 @@
+﻿@using PlanningPoker.Driven_Adapters;
+@using PlanningPoker.Persistence;
+@using PlanningPoker.Shared;
+@page "/Games/Index"
+@inject IPlanningPokerAdapter PlanningPokerAdapter
+@inject NavigationManager navigationManager
+@attribute [Authorize]
+<PageTitle>Games</PageTitle>
+<h1>Games</h1>
+<table>
+    <thead>
+    <tr style="border: solid 2px black">
+        <th style="border: solid 2px black">Id</th>
+
+        <th style="border: solid 2px black">Created By</th>
+
+        <th style="border: solid 2px black">User Story Id</th>
+
+        <th style="border: solid 2px black">Team Id</th>
+
+        <th style="border: solid 2px black">Created</th>
+
+        <th style="border: solid 2px black">Updated</th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach(var game in PlanningPokerAdapter._Game)
+{   
+    if (game.IsDeleted == false)
+    {   
+        <tr style="border: solid 2px black">
+            <td style="border: solid 2px black">    @game.Id
+            </td>           
+            <td style="border: solid 2px black">    @game.CreatedBy
+            </td>
+            <td style="border: solid 2px black">    @game.UserStoryId
+            </td>
+            <td style="border: solid 2px black">
+                    @game.TeamId
+            </td>
+            <td style="border: solid 2px black">
+                    @game.Created
+            </td>
+            <td style="border: solid 2px black">    @game.Updated
+            </td>
+            
+                <button class="btn btn-primary" @onclick="(() => ReadGameSingle(game.Id))">
+                    <i class="oi oi pencil">Edit</i>
+                </button>
+                          
+            
+                <button class="btn btn-primary" @onclick="(() => PlayGame(game.Id))">
+                    <i class="oi oi pencil">Play the game for this story</i>
+                </button>
+            
+        </tr>
+    }
+}
+</tbody>
+</table>  
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await PlanningPokerAdapter.ReadGame();
+    }
+
+    void ReadGameSingle(int id)
+    {
+        navigationManager.NavigateTo($"/Games/Details/{id}");
+    }
+
+    void CreateGame()
+    {
+        navigationManager.NavigateTo($"/Games/Details");
+    }
+
+    void PlayGame(int id)
+    {
+        navigationManager.NavigateTo($"/Games/Details/{id}");
+    }
+}

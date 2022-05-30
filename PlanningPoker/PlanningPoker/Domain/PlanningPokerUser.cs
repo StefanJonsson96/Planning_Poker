@@ -16,5 +16,10 @@ namespace PlanningPoker.Domain
         public int TeamId { get; set; }
 
         public DateTime Updated { get; set; }
+
+        public static implicit operator string(PlanningPokerUser v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
