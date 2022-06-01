@@ -44,12 +44,12 @@
             <td style="border: solid 2px black">    @game.Updated
             </td>
             
-                <button class="btn btn-primary" @onclick="(() => ReadGameSingle(game.Id))">
-                    <i class="oi oi pencil">Edit</i>
+                <button class="btn btn-primary" @onclick="(() => DeleteGame(game.Id))">
+                    <i class="oi oi pencil">Delete</i>
                 </button>
                           
             
-                <button class="btn btn-primary" @onclick="(() => PlayGame(game.Id))">
+                <button class="btn btn-primary" @onclick="(() => PlayGame(game.UserStoryId))">
                     <i class="oi oi pencil">Play the game for this story</i>
                 </button>
             
@@ -76,6 +76,10 @@
 
     void PlayGame(int id)
     {
-        navigationManager.NavigateTo($"/Games/Details/{id}");
+        navigationManager.NavigateTo($"/Games/Play/{id}");
+    }
+    void DeleteGame(int id)
+    {
+        PlanningPokerAdapter.DeleteGame(id);
     }
 }

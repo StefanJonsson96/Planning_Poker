@@ -1,0 +1,99 @@
+﻿@page "/Games/Play"
+@page "/Games/Play/{Id:int}"
+@using PlanningPoker.Driven_Adapters
+@inject IUserStoryAdapter UserStoryAdapter
+@inject IUserAdapter UserAdapter
+@inject IPlanningPokerAdapter PlanningPokerAdapter
+@attribute [Authorize]
+<h3>Cast your vote</h3>
+<table>
+    <thead>
+    <tr style="border: solid 2px black">
+        <th style="border: solid 2px black">Name</th>
+
+        <th style="border: solid 2px black">Created</th>
+
+        <th style="border: solid 2px black">Id</th>
+
+        <th style="border: solid 2px black">Team Id</th>
+
+        <th style="border: solid 2px black">Text</th>
+
+        <th style="border: solid 2px black">Updated</th>
+
+        <th style="border: solid 2px black">Priority</th>
+    </tr>
+    </thead>
+    <tbody>  
+    @if (_UserStory.IsDeleted == false)
+    {   
+        <tr style="border: solid 2px black">
+            <td style="border: solid 2px black">    @_UserStory.Title
+            </td>           
+            <td style="border: solid 2px black">    @_UserStory.Created
+            </td>
+            <td style="border: solid 2px black">    @_UserStory.Id
+            </td>
+            <td style="border: solid 2px black">
+                    @_UserStory.TeamId
+            </td>
+            <td style="border: solid 2px black">
+                    @_UserStory.Description
+            </td>
+            <td style="border: solid 2px black">    @_UserStory.Updated
+            </td>
+            <td style="border: solid 2px black">
+                    @_UserStory.Priority
+            </td>
+        </tr>
+    }
+</tbody>
+</table> 
+<br />
+<button class="kort0" @onclick="(() => Vote(0, Id))">0</button>
+<button class="kort1" @onclick="(() => Vote(1, Id))">1</button>
+<button class="kort2" @onclick="(() => Vote(2, Id))">2</button>
+<button class="kort3" @onclick="(() => Vote(3, Id))">3</button>
+<button class="kort5" @onclick="(() => Vote(5, Id))">5</button>
+<button class="kort8" @onclick="(() => Vote(8, Id))">8</button>
+<button class="kort13" @onclick="(() => Vote(13, Id))">13</button>
+<button class="kort21" @onclick="(() => Vote(21, Id))">21</button>
+<button class="kort31" @onclick="(() => Vote(31, Id))">31</button>
+<button class="kort55" @onclick="(() => Vote(55, Id))">55</button>
+<button class="kort89" @onclick="(() => Vote(89, Id))">89</button>
+<button class="kortEPIC" @onclick="(() => Vote(99, Id))">EPIC</button>
+<button class="kortPass" @onclick="(() => Vote(null, Id))">Pass</button>
+<h2>Votes</h2>
+@foreach (var user in _Users)
+{
+    bool kod = true; @*kod här*@   
+    if(kod)
+    {
+        <p>@user.Name has not voted on this round!</p>
+    }
+    else 
+    {
+    <p>@user.Name has voted @*kod här*@ on this round!</p>
+    }
+}
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    UserStory _UserStory = new UserStory();
+    List<PlanningPokerUser> _Users = new List<PlanningPokerUser>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        _UserStory = await UserStoryAdapter.ReadUserStorySingleWorkAround(Id);
+        // Gick inte att casta från nullable int så har gjort en till metod med samma kod men inte nullable int!
+        _Users = UserAdapter.GetUserFromTeam(_UserStory.TeamId);
+
+    }
+
+    public void Vote(int? points, int? gameId)
+    {
+        PlanningPokerAdapter.Vote(points, gameId);
+    }
+}

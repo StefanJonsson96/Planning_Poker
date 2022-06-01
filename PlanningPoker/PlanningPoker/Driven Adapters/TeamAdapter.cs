@@ -45,6 +45,17 @@ namespace PlanningPoker.Driven_Adapters
             return team;
 
         }
+        public async Task<Team> ReadTeamSingleWorkAround(int? id)
+        {
+            var team = await _context.Team
+                                     .FindAsync(id);
+            if (team == null)
+            {
+                throw new Exception("No game with this id.");
+            }
+            return team;
+
+        }
         public async Task UpdateTeam(Domain.Team team, int id)
         {
             var dbTeam = await _context.Team.FindAsync(id);

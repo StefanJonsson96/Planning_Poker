@@ -9,6 +9,7 @@ namespace PlanningPoker.Driven_Adapters
         Task CreateTeam(Domain.Team team); // CRUD Test
         Task ReadTeam();
         Task<Team> ReadTeamSingle(int id);
+        Task<Team> ReadTeamSingleWorkAround(int? id);
         Task UpdateTeam(Domain.Team team, int id);
         Task DeleteTeam(int id);
     }

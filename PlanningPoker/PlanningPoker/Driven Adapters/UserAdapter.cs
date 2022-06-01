@@ -39,6 +39,17 @@ namespace PlanningPoker.Driven_Adapters
                                   .FirstAsync();
 
         }
+        public List<PlanningPokerUser> GetUserFromTeam(int teamId)
+        {
+            List<PlanningPokerUser> _Users = new List<PlanningPokerUser>();
+
+            foreach (var user in _context.Users.Where(u => u.TeamId == teamId))
+            {
+                _Users.Add(user);
+            }
+
+            return _Users;
+        }
         public async Task ReadTeam()
         {
             Team = await _context.Team

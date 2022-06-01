@@ -66,4 +66,87 @@ a, .btn-link {
     .th {
         font-weight: 900;
     }
+.kortEPIC {
+    background-color: #ff0000;
+    width:50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kort89 {
+    background-color: #fe3c00;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kort55 {
+    background-color: #fa5a00;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kort31 {
+    background-color: #f47300;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
 
+.kort21 {
+    background-color: #ea8900;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.kort13 {
+    background-color: #de9d00;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kort8 {
+    background-color: #cfb000;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.kort5 {
+    background-color: #bdc100;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.kort3 {
+    background-color: #a7d200;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kort2 {
+    background-color: #8be200;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.kort1 {
+    background-color: #65f100;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.kort0 {
+    background-color: #00ff00;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}
+.kortPass {
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 200px;
+    border: solid 2px black;
+}

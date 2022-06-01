@@ -123,6 +123,8 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
             public string TeamName { get; set; }
 
             public int TeamId { get; set; }
+            [Required]
+            public string Role { get; set; }
         }
 
 
@@ -152,13 +154,30 @@ namespace PlanningPoker.Areas.Identity.Pages.Account
                     TeamId = team.Id
 
                 };
+                if (Input.Role == "Admin")
+                {
+                    var Admin = new IdentityUserRole<string>() { RoleId = "inz5jyo9-c546-41de-aebc-a14da6895711", UserId = await _userManager.GetUserIdAsync(user) };
                 
+                    _context.UserRoles.Add(Admin);                  
+                }
+                else if (Input.Role == "TeamLeader")
+                {
+
+                var teamLeader = new IdentityUserRole<string>() { RoleId = "dca3qpo1-c546-41de-aebc-a14da6895711", UserId = await _userManager.GetUserIdAsync(user) };
+            
+                    _context.UserRoles.Add(teamLeader);                    
+                }
+                
+
+
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
+
                 if (result.Succeeded)
                 {
+                    await _context.SaveChangesAsync();
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);

@@ -9,6 +9,7 @@ namespace PlanningPoker.Driven_Adapters
         Task CreateUserStory(Domain.UserStory userstory); // CRUD Test
         Task ReadUserStory();
         Task<UserStory> ReadUserStorySingle(int id);
+        Task<UserStory> ReadUserStorySingleWorkAround(int? id);
         Task UpdateUserStory(Domain.UserStory userstory, int id);
         Task DeleteUserStory(int id);
         Task PlayGame(int id);

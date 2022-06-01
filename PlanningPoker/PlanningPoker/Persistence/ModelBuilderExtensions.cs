@@ -68,7 +68,7 @@ namespace PlanningPoker.Persistence
                 Id = "TeamLeader",
                 UserName = "tl@pp.com",
                 NormalizedUserName = "TL@PP.COM",
-                Email = "tl@coolbooks.com",
+                Email = "tl@PP.com",
                 NormalizedEmail = "TL@PP.COM",
                 Name = "Team Leader",
                 LockoutEnabled = false,
@@ -78,11 +78,27 @@ namespace PlanningPoker.Persistence
                 DOB = new DateTime(1973, 03, 13)
             };
 
+            PlanningPokerUser User = new PlanningPokerUser()
+            {
+                Id = "User",
+                UserName = "user@pp.com",
+                NormalizedUserName = "USER@PP.COM",
+                Email = "user@pp.com",
+                NormalizedEmail = "USER@PP.COM",
+                Name = "User",
+                LockoutEnabled = false,
+                PhoneNumber = "1119561190",
+                TeamId = 1,
+                // ImagePath = "/images/Users/admin.png", WIP
+                DOB = new DateTime(1973, 03, 13)
+            };
+
             PasswordHasher<PlanningPokerUser> passwordHasher = new PasswordHasher<PlanningPokerUser>();
             Stefan.PasswordHash = passwordHasher.HashPassword(Stefan, ".");
             TeamLeader.PasswordHash = passwordHasher.HashPassword(TeamLeader, ".");
+            User.PasswordHash = passwordHasher.HashPassword(User, ".");
 
-            modelBuilder.Entity<PlanningPokerUser>().HasData(Stefan, TeamLeader);
+            modelBuilder.Entity<PlanningPokerUser>().HasData(Stefan, TeamLeader, User);
         }
         public static void SeedRole(this ModelBuilder modelBuilder)
         {

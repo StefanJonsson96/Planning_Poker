@@ -95,5 +95,41 @@ namespace PlanningPoker.Driven_Adapters
             await _context.SaveChangesAsync();
             _navigationManager.NavigateTo("/Games/Index");
         }
+
+        public async Task DeleteGame(int id)
+        {
+            var dbGame = await _context.Game.FindAsync(id);
+            if (dbGame == null)
+            {
+                throw new Exception("Cannot delete a game that doesn't exist.");
+            }
+            _context.Game.Remove(dbGame);
+            await _context.SaveChangesAsync();
+            _navigationManager.NavigateTo("/Games/Index", forceLoad: true);
+
+        }
+
+        public async Task Vote(int? points, int? gameId)
+        {
+
+            var authState = await _AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var authStateUser = authState.User;
+            var name = authStateUser.Identity.Name;
+
+            var user = await _context.Users
+                                  .Where(u => u.UserName == name)
+                                  .FirstAsync();
+
+            Domain.Round round = new Domain.Round();
+            round.GameId = (int)gameId;
+            round.PlanningPokerUser = user;
+            round.Points = points;
+            round.PlayedTime = DateTime.Now;
+
+
+            _context.Round.Add(round);
+            await _context.SaveChangesAsync();
+            _navigationManager.NavigateTo($"/Games/Play/{gameId}", forceLoad: true);
+        }
     }
 }

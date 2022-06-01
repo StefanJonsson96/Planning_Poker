@@ -16,7 +16,7 @@ namespace PlanningPoker.Domain
         public virtual PlanningPokerUser PlanningPokerUser { get; set; }
 
         [Required]
-        public int Points { get; set; }
+        public int? Points { get; set; }
 
         [Required]
         public DateTime PlayedTime { get; set; }

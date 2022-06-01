@@ -62,6 +62,17 @@ namespace PlanningPoker.Driven_Adapters
             return userstory;
 
         }
+        public async Task<UserStory> ReadUserStorySingleWorkAround(int? id)
+        {
+            var userstory = await _context.UserStory
+                                     .FindAsync(id);
+            if (userstory == null)
+            {
+                throw new Exception("No user story with this id.");
+            }
+            return userstory;
+
+        }
         public async Task UpdateUserStory(Domain.UserStory userstory, int id)
         {
             var dbUserStory = await _context.UserStory.FindAsync(id);
