@@ -24,6 +24,8 @@ namespace PlanningPoker.Domain
         [Range(1, 5)]
         public int Priority { get; set; }
 
+        public int? Points { get; set;  }
+
 
     }
 }

@@ -42,7 +42,10 @@ namespace PlanningPoker.Persistence
         {
             modelBuilder.Entity<Game>()
                         .HasData(
-                        new Game { }
+                        new Game {  
+                                    
+                                  }
+
 
                 );
         }

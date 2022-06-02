@@ -71,6 +71,18 @@ namespace PlanningPoker.Driven_Adapters
                                       .ToListAsync();
         }
 
+        public List<Domain.Round> GetRounds(int? gameId)
+        {
+            List<Domain.Round> _Round = new List<Domain.Round>();
+
+            foreach (var round in _context.Round.Where(u => u.GameId == gameId))
+            {
+                _Round.Add(round);
+            }
+
+            return _Round;
+        }
+
         public async Task<Domain.Game> ReadGameSingle(int id)
         {
             var game = await _context.Game
@@ -130,6 +142,33 @@ namespace PlanningPoker.Driven_Adapters
             _context.Round.Add(round);
             await _context.SaveChangesAsync();
             _navigationManager.NavigateTo($"/Games/Play/{gameId}", forceLoad: true);
+        }
+
+        public async Task PlayAgain(int? id)
+        {
+
+            var dbGame = _context.Game
+                                 .Where(g => g.UserStoryId == id)
+                                 .First();
+
+            var rounds = _context.Round
+                                 .Where(r => r.GameId == dbGame.Id)
+                                 .ToList();
+
+            foreach (var round in rounds)
+            {
+                round.IsDeleted = true;
+            }
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task SaveGame(int id, int? points)
+        {
+            var dbUserStory = await _context.UserStory.FindAsync(id);
+            dbUserStory.Points = points;
+            await _context.SaveChangesAsync();
+           
+
         }
     }
 }

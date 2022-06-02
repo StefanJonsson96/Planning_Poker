@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using PlanningPoker.Domain;
+using PlanningPoker.Driven_Adapters;
 
 namespace PlanningPoker.Persistence
 {
@@ -61,8 +62,9 @@ namespace PlanningPoker.Persistence
             modelBuilder.SeedUser();
             modelBuilder.SeedRole();
             modelBuilder.SeedUserRole();
-            //modelBuilder.SeedRound();
             //modelBuilder.SeedGame();
+            //modelBuilder.SeedRound();
+            
 
 
         }

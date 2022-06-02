@@ -4,6 +4,7 @@
 @inject IUserStoryAdapter UserStoryAdapter
 @inject IUserAdapter UserAdapter
 @inject IPlanningPokerAdapter PlanningPokerAdapter
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @attribute [Authorize]
 <h3>Cast your vote</h3>
 <table>
@@ -22,6 +23,8 @@
         <th style="border: solid 2px black">Updated</th>
 
         <th style="border: solid 2px black">Priority</th>
+
+        <th style="border: solid 2px black">Points</th>
     </tr>
     </thead>
     <tbody>  
@@ -45,6 +48,9 @@
             <td style="border: solid 2px black">
                     @_UserStory.Priority
             </td>
+            <td style="border solid 2px black">
+                    @_UserStory.Points
+            </td>
         </tr>
     }
 </tbody>
@@ -62,38 +68,127 @@
 <button class="kort55" @onclick="(() => Vote(55, Id))">55</button>
 <button class="kort89" @onclick="(() => Vote(89, Id))">89</button>
 <button class="kortEPIC" @onclick="(() => Vote(99, Id))">EPIC</button>
-<button class="kortPass" @onclick="(() => Vote(null, Id))">Pass</button>
+@* <button class="kortPass" @onclick="(() => Vote(, Id))">Pass</button> just nu kan man inte välja PASS, wip *@
 <h2>Votes</h2>
-@foreach (var user in _Users)
+@{
+    List<PlanningPokerUser> Voted = new List<PlanningPokerUser>();
+}
+@foreach (var round in _Round.Where(r => r.IsDeleted != true))
 {
-    bool kod = true; @*kod här*@   
-    if(kod)
+    
+    Voted.Add(round.PlanningPokerUser); // stoppar in users i Voted listan
+    avg = avg + (int)round.Points;
+    votes++;
+    <p>@round.PlanningPokerUser.Name has voted @round.Points this round</p> // skriver ut vem som röstat
+}
+@{
+    List<PlanningPokerUser> notVoted = new List<PlanningPokerUser>();
+    foreach (var user in _Users) // stoppar in users i notVoted listan
     {
-        <p>@user.Name has not voted on this round!</p>
+        if(Voted.Contains(user))
+        {
+
+        }
+        else
+        {
+            notVoted.Add(user);
+        }
     }
-    else 
+    if (notVoted.Count() != 0) 
     {
-    <p>@user.Name has voted @*kod här*@ on this round!</p>
+        foreach (var user in notVoted)
+        {
+            <p>@user.Name has not voted this round</p>
+            // skriver ut vem som inte röstat
+        }
+    }
+    else // om listan notvoted är tom så har teamleader möjlighet att skapa nytt game
+    {
+        
+        float result = avg/votes;
+
+        List<int> fibo = new List<int>()
+        {
+            0, 1, 2, 3, 5, 8, 13, 21, 31, 55, 89, 99
+        };
+
+        double number = Math.Round(result);
+        double closest = fibo.Aggregate((x,y) => Math.Abs(x-number) < Math.Abs(y-number) ? x : y);
+        points = (int)closest;
+        SaveGame(); @*Sparar resultat om alla har röstat*@
+
+        <p>Everyone has voted this round, the average for this round is @Math.Round(result)</p>
+        <p>Closest number to the average is @closest.</p>
+        if (role == "TeamLeader" || role == "Admin")
+        {
+            <button class="btn btn-primary" @onclick="(() => PlayAgain())">Play again</button>
+        }
+        else
+        {            
+            <p>Your teamleader will decide if you play another round or not.</p>
+        }
     }
 }
 @code {
     [Parameter]
     public int? Id { get; set; }
+    public float avg { get; set; }
+    public float votes { get; set; }
+    bool loggedIn;
+    string role;
+    int points;
 
     UserStory _UserStory = new UserStory();
+    List<Round> _Round = new List<Round>();
     List<PlanningPokerUser> _Users = new List<PlanningPokerUser>();
+
 
     protected override async Task OnInitializedAsync()
     {
 
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)  
+        {
+
+            loggedIn = true;
+
+            if (user.IsInRole("Admin"))
+            {
+                role = "Admin";
+            }
+            else if (user.IsInRole("TeamLeader"))
+            {
+                role = "TeamLeader";
+            }
+            else
+            {
+                role = "User";
+            }
+        }  
+        else  
+        {
+
+            loggedIn = false;
+        } 
         _UserStory = await UserStoryAdapter.ReadUserStorySingleWorkAround(Id);
         // Gick inte att casta från nullable int så har gjort en till metod med samma kod men inte nullable int!
         _Users = UserAdapter.GetUserFromTeam(_UserStory.TeamId);
+        _Round = PlanningPokerAdapter.GetRounds(Id);
 
     }
 
     public void Vote(int? points, int? gameId)
     {
         PlanningPokerAdapter.Vote(points, gameId);
+    }
+
+    public void PlayAgain()
+    {
+        PlanningPokerAdapter.PlayAgain(Id);
+    }
+    public void SaveGame()
+    {
+        PlanningPokerAdapter.SaveGame(_UserStory.Id, points);
     }
 }

@@ -4,6 +4,7 @@
 @page "/Games/Index"
 @inject IPlanningPokerAdapter PlanningPokerAdapter
 @inject NavigationManager navigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @attribute [Authorize]
 <PageTitle>Games</PageTitle>
 <h1>Games</h1>
@@ -43,11 +44,12 @@
             </td>
             <td style="border: solid 2px black">    @game.Updated
             </td>
-            
+                @if (role == "TeamLeader" || role == "Admin")
+                {
                 <button class="btn btn-primary" @onclick="(() => DeleteGame(game.Id))">
                     <i class="oi oi pencil">Delete</i>
                 </button>
-                          
+                }          
             
                 <button class="btn btn-primary" @onclick="(() => PlayGame(game.UserStoryId))">
                     <i class="oi oi pencil">Play the game for this story</i>
@@ -59,8 +61,35 @@
 </tbody>
 </table>  
 @code {
+    bool loggedIn;
+    string role;
     protected override async Task OnInitializedAsync()
     {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)  
+        {
+
+            loggedIn = true;
+
+            if (user.IsInRole("Admin"))
+            {
+                role = "Admin";
+            }
+            else if (user.IsInRole("TeamLeader"))
+            {
+                role = "TeamLeader";
+            }
+            else
+            {
+                role = "User";
+            }
+            }  
+            else  
+            {
+
+                loggedIn = false;
+            } 
         await PlanningPokerAdapter.ReadGame();
     }
 

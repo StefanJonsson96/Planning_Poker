@@ -12,9 +12,9 @@
 <table>
     <thead>
     <tr style="border: solid 2px black">
-        <th style="border: solid 2px black">Namn</th>
+        <th style="border: solid 2px black">Name</th>
 
-        <th style="border: solid 2px black">Datum skapat</th>
+        <th style="border: solid 2px black">Created</th>
 
         <th style="border: solid 2px black">Id</th>
 
@@ -22,9 +22,11 @@
 
         <th style="border: solid 2px black">Text</th>
 
-        <th style="border: solid 2px black">Senast uppdaterat</th>
+        <th style="border: solid 2px black">Updated</th>
 
-        <th style="border: solid 2px black">Prioritet</th>
+        <th style="border: solid 2px black">Priority</th>
+
+        <th style="border: solid 2px  blac">Points</th>
     </tr>
     </thead>
     <tbody>
@@ -49,6 +51,9 @@
             </td>
             <td style="border: solid 2px black">
                     @userStory.Priority
+            </td>
+            <td style="border: solid 2px black">
+                    @userStory.Points
             </td>
             
                 <button class="btn btn-primary" @onclick="(() => ReadUserStorySingle(userStory.Id))">
