@@ -1,3 +1,3 @@
 # Planning_Poker
 
-https://docs.google.com/spreadsheets/d/1DvYEC7HCFlMjDphQvpICuR17LcxgqwLyD4CIFyp4Mfo/edit#gid=0 - Burndown chart
+Planning Poker WebApp gjord i Blazor Server under min 4veckors LIA på InExChange Skövde.
